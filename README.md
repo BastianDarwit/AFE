@@ -8,13 +8,15 @@ Rama única para los hitos de avance. Cada hito tiene su carpeta y sus versiones
 | Carpeta | Contenido | Estado |
 |---|---|---|
 | `AVANCE_1/` | Presentación v5 y guion v2: versión final presentada el 12/09/2026 (semana 5) | Cerrado |
-| `AVANCE_2/` | Presentación v1, sobre la plantilla oficial «Avance 2 AFE 2017» (semana 10) | En revisión |
+| `AVANCE_2/` | Presentación v2 (vigente) y v1, sobre la plantilla oficial «Avance 2 AFE 2017» (semana 10) | En revisión |
 
 Las versiones intermedias del Avance 1 (v1 a v4) quedan en la rama `PRESENTACION_TFG`.
 
-## Avance 2 · v1
+## Avance 2 · v2
 
-Sigue la plantilla del magíster: portada, título, problema (2), marco teórico (2), desarrollo y resultados del OE1 (2), del OE2 (2), carta Gantt con nivel de cumplimiento y cierre. Se agregan dos anexos con capturas de los manuales.
+Portada, título, problema (2), objetivos (1), desarrollo y resultados del OE1 (4), del OE2 (2), carta Gantt con nivel de cumplimiento y cierre.
+
+Cambios respecto de la v1: el marco teórico se reemplaza por una lámina única de objetivos, porque el trabajo ya está aprobado; el SIPOC de MP8 y la ficha de MP21 pasan de anexos a resultados del OE1, con señalizaciones.
 
 Los datos provienen de los manuales del repositorio `MANUALES` (ramas `MANUAL-MP8` y `MANUAL-MP21`, v1):
 

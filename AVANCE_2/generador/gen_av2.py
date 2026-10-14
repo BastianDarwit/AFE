@@ -414,7 +414,7 @@ def s_marco2(num):
 # ------------------------------------------------------------------ 7 OE1 1
 def s_oe1a(num):
     s = Slide(L_BODY, label='OE1 1')
-    header(s, 'Desarrollo y resultados del OE1 (1 de 2)', num)
+    header(s, 'Desarrollo y resultados del OE1 (1 de 4)', num)
     tb(s, 'Actividades', MX, BODY_T, CW, 0.70,
        [para([r('Actividades realizadas. ', sz=1150, b=True, color=INK),
               r('A1.3.2 segmentación jerárquica de MP8 desde el flujo único del Avance 1, y '
@@ -469,7 +469,7 @@ def s_oe1a(num):
 # ------------------------------------------------------------------ 8 OE1 2
 def s_oe1b(num):
     s = Slide(L_BODY, label='OE1 2')
-    header(s, 'Desarrollo y resultados del OE1 (2 de 2)', num)
+    header(s, 'Desarrollo y resultados del OE1 (2 de 4)', num)
     tb(s, 'Bajada', MX, BODY_T - 0.04, CW, 0.32,
        [para([r('Ejemplo del manual MP8: subproceso C.1 Requisición y apertura de vacante.',
                 sz=1100, color=INK, b=True)])], anchor='ctr')
@@ -515,6 +515,110 @@ def s_oe1b(num):
     s.add(table(s.nid(), 'Tabla estado', MX, yt + 0.32, col, t, [0.28] + [0.27] * 3))
     fuente(s, 'Figura 3. Flujograma y tabla de actividades y tareas del subproceso C.1 (manual '
               'MP8 v1). En el manual, el texto naranjo identifica propuestas por validar.')
+    return s
+
+
+
+# ------------------------------------------------------------------ objetivos
+def s_objetivos(num):
+    s = Slide(L_BODY, label='Objetivos')
+    header(s, 'Objetivos', num)
+    head(s, MX, BODY_T, CW, 'Objetivo general')
+    tb(s, 'OG', MX, BODY_T + 0.34, CW, 0.66,
+       [para([r('Estructurar un sistema de gestión de riesgos según COSO II para los '
+                'macroprocesos de Gestión de Personas (MP8) y Servicios Generales (MP21) de '
+                'Celulosa Arauco y Constitución S.A.', sz=1400, color=INK)], line=108)])
+    regla(s, 3.34)
+    head(s, MX, 3.48, CW, 'Objetivos específicos')
+    oes = [('OE1', 'Modelar', 'la arquitectura de procesos de MP8 y MP21, desde sus procesos '
+            'hasta sus tareas, según el marco del Modelo de Gestión Operacional.', 'CAP'),
+           ('OE2', 'Evaluar', 'los riesgos operacionales asociados a las tareas modeladas de '
+            'ambos macroprocesos según COSO II.', 'TCER'),
+           ('OE3', 'Elaborar', 'el sistema de gestión de riesgos, integrando el catálogo de '
+            'riesgos y sus planes de mitigación según COSO II.', 'CRPM')]
+    y = 3.88
+    for code, verb, text, ind in oes:
+        tb(s, 'OE cod ' + code, MX, y, 0.62, 0.32, [para([r(code, sz=1300, b=True, color=BLUE_LT)])])
+        tb(s, 'OE txt ' + code, MX + 0.66, y, 6.90, 0.62,
+           [para([r(verb + ' ', sz=1250, b=True, color=INK), r(text, sz=1250)], line=106)])
+        tb(s, 'OE ind ' + code, MX + 7.70, y, 1.40, 0.32,
+           [para([r('Indicador: ', sz=950, color=TX_SOFT), r(ind, sz=950, b=True, color=INK)])])
+        y += 0.80
+    tb(s, 'Nota', MX, 6.28, CW, 0.30,
+       [para([r('Objetivos sin modificaciones. Este avance reporta el OE1 y la preparación del '
+                'OE2.', sz=1000, i=True, color=TX_SOFT)])], anchor='ctr')
+    return s
+
+
+# ------------------------------------------------------------------ OE1 3: SIPOC MP8
+def s_oe1c(num):
+    s = Slide(L_BODY, label='OE1 3')
+    header(s, 'Desarrollo y resultados del OE1 (3 de 4)', num)
+    tb(s, 'Bajada', MX, BODY_T - 0.04, CW, 0.32,
+       [para([r('SIPOC del macroproceso MP8: cómo se articulan sus cinco procesos.', sz=1100,
+                b=True, color=INK)])], anchor='ctr')
+    crop = (45, 50, 1245, 712)
+    w = 6.10
+    box = imagen(s, 'Captura SIPOC MP8', 'mp8_sipoc', MX, 2.62, w=w)
+    f = mapper(box, crop)
+    marca(s, f, (64, 211, 442, 435), 1, place='tl')
+    marca(s, f, (480, 230, 803, 518), 2, place='tr')
+    marca(s, f, (851, 211, 1194, 496), 3, place='tr')
+    marca(s, f, (54, 595, 1232, 691), 4, place='bl')
+    xr = MX + w + 0.30
+    wr = MX + CW - xr
+    head(s, xr, 2.62, wr, 'Qué muestra', sz=1150)
+    leyenda(s, xr, 3.00, wr, [
+        (1, [r('Proveedores y entradas: ', sz=1000, b=True, color=INK),
+             r('desde el plan estratégico hasta la normativa laboral.', sz=1000)], 3),
+        (2, [r('Cinco procesos', sz=1000, b=True, color=INK),
+             r(' encadenados, de la dotación a la compensación.', sz=1000)], 3),
+        (3, [r('Salidas y clientes: ', sz=1000, b=True, color=INK),
+             r('personas contratadas, habilitadas y retribuidas.', sz=1000)], 3),
+        (4, [r('Macroprocesos de soporte', sz=1000, b=True, color=INK),
+             r(' con que interactúa MP8.', sz=1000)], 2),
+    ], sz=1000, gap=0.10, line_h=0.19)
+    fuente(s, 'Figura 4. SIPOC del macroproceso Gestión de Personas (manual MP8 v1). Fuente: '
+              'elaboración propia.')
+    return s
+
+
+# ------------------------------------------------------------------ OE1 4: MP21
+def s_oe1d(num):
+    s = Slide(L_BODY, label='OE1 4')
+    header(s, 'Desarrollo y resultados del OE1 (4 de 4)', num)
+    tb(s, 'Bajada', MX, BODY_T - 0.04, CW, 0.32,
+       [para([r('MP21: estructura definida y levantamiento del ciclo del contrato en curso.',
+                sz=1100, b=True, color=INK)])], anchor='ctr')
+    crop = (45, 50, 1245, 700)
+    w = 6.10
+    box = imagen(s, 'Captura ficha MP21', 'mp21_ficha', MX, 2.62, w=w)
+    f = mapper(box, crop)
+    marca(s, f, (63, 140, 1222, 220), 1, place='tl')
+    marca(s, f, (63, 456, 617, 671), 2, place='bl')
+    marca(s, f, (63, 228, 1214, 448), 3, place='tr')
+    marca(s, f, (646, 456, 1214, 671), 4, place='br')
+    xr = MX + w + 0.30
+    wr = MX + CW - xr
+    head(s, xr, 2.62, wr, 'Estado del manual MP21', sz=1150)
+    leyenda(s, xr, 3.00, wr, [
+        (1, [r('Objetivo definido', sz=1000, b=True, color=INK),
+             r('; propósito propuesto por validar.', sz=1000)], 2),
+        (2, [r('Dueño identificado: ', sz=1000, b=True, color=INK),
+             r('Subgerencia de Administración y jefes zonales.', sz=1000)], 3),
+        (3, [r('Entradas y salidas', sz=1000, b=True, color=INK),
+             r(' pendientes de levantamiento.', sz=1000)], 2),
+        (4, [r('KPI', sz=1000, b=True, color=INK),
+             r(' pendientes de levantamiento.', sz=1000)], 1),
+    ], sz=1000, gap=0.10, line_h=0.19)
+    regla(s, 5.22, x=xr, w=wr)
+    tb(s, 'Estructura', xr, 5.30, wr, 1.30,
+       [para([r('%d procesos y %d subprocesos' % (T21['proc'], T21['sub']), sz=1000, b=True,
+                color=INK),
+              r(' según el mapa de procesos vigente: gestión estratégica, planificación, '
+                'administración y término de contrato.', sz=1000)], line=105)])
+    fuente(s, 'Figura 5. Ficha resumen de Gestión de Servicios Generales (manual MP21 v1). En '
+              'gris, contenido pendiente de levantamiento.')
     return s
 
 
@@ -744,17 +848,11 @@ def s_anexo(num, titulo, fname, rot, nota):
 
 def make(out):
     slides = [s_portada(), s_titulo()]
-    seq = [s_problema1, s_problema2, s_marco1, s_marco2, s_oe1a, s_oe1b, s_oe2a, s_oe2b,
-           s_gantt]
+    seq = [s_problema1, s_problema2, s_objetivos, s_oe1a, s_oe1b, s_oe1c, s_oe1d, s_oe2a,
+           s_oe2b, s_gantt]
     for k, fn in enumerate(seq, 3):
         slides.append(fn(k))
     slides.append(s_cierre())
-    n = len(slides) + 1
-    slides.append(s_anexo(n, 'Anexo A · SIPOC del macroproceso MP8', 'mp8_sipoc', 'Figura A1.',
-                          'SIPOC del macroproceso Gestión de Personas (manual MP8 v1).'))
-    slides.append(s_anexo(n + 1, 'Anexo B · Ficha resumen del macroproceso MP21', 'mp21_ficha',
-                          'Figura B1.', 'Ficha resumen de Gestión de Servicios Generales (manual '
-                                        'MP21 v1). En gris, contenido pendiente de levantamiento.'))
     build(BASE, out, slides, title='Avance 2 TFG - ' + AUTOR, author=AUTOR, media=MEDIA)
     return slides
 
