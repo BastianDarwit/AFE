@@ -8,9 +8,36 @@ Rama única para los hitos de avance. Cada hito tiene su carpeta y sus versiones
 | Carpeta | Contenido | Estado |
 |---|---|---|
 | `AVANCE_1/` | Presentación v5 y guion v2: versión final presentada el 12/09/2026 (semana 5) | Cerrado |
-| `AVANCE_2/` | Presentación v2 (vigente) y v1, sobre la plantilla oficial «Avance 2 AFE 2017» (semana 10) | En revisión |
+| `AVANCE_2/` | Presentación v3 (vigente), v2 y v1, sobre la plantilla oficial «Avance 2 AFE 2017» (semana 10) | En revisión |
 
 Las versiones intermedias del Avance 1 (v1 a v4) quedan en la rama `PRESENTACION_TFG`.
+
+## Avance 2 · v3
+
+19 láminas. Incorpora el manual **MP21 v2** (rama `MANUAL-MP21` del repositorio `MANUALES`). El OE1 pasa de 4 a 10 láminas:
+
+| OE1 | Lámina |
+|---|---|
+| 1 | Elementos por nivel MGO, con MP21 completo en sus cinco niveles |
+| 2 y 3 | MP8: ejemplo C.1 y SIPOC (sin cambios) |
+| 4 | **Ajuste metodológico** en MP21: estructura acordada con el dueño en lugar del flujo único, con equivalencias APQC PCF 8.0 |
+| 5 | Reestructuración v1 → v2: de la vida de un contrato a un ciclo de gestión del servicio |
+| 6 | Ciclo A → B → MP19 → C → D con retroalimentación, y dónde quedó cada elemento del v1 |
+| 7 | SIPOC de MP21 v2 y alcance en las cinco plantas, incluida Licancel |
+| 8 y 9 | Ejemplos C.1 Aseguramiento del servicio y C.2 Control y mejora |
+| 10 | Estado del contenido: MP8 frente a MP21 |
+
+También se actualizan el OE2 (universo de 248 tareas, ejemplo de fila de MP21) y la carta Gantt (A1.4.1 y A1.4.2 completadas; 5 de 8 actividades del OE1 completadas).
+
+| Nivel | MP8 v1 | MP21 v2 |
+|---:|---:|---:|
+| Procesos | 5 | 4 |
+| Subprocesos | 17 | 8 |
+| Actividades (levantadas / propuestas) | 59 (37 / 22) | 24 (11 / 13) |
+| Tareas (levantadas / propuestas) | 192 (171 / 21) | 56 (13 / 43) |
+| Tareas con responsable | 83 | 53 |
+
+Regenerar: `python3 stats.py mp21_v2.pptx stats_mp21_v2.json`, `python3 capturas_v3.py ../capturas` y `python3 gen_av3.py salida.pptx` (usa `gen_av2.py` para las láminas sin cambios).
 
 ## Avance 2 · v2
 
