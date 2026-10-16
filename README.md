@@ -8,9 +8,18 @@ Rama única para los hitos de avance. Cada hito tiene su carpeta y sus versiones
 | Carpeta | Contenido | Estado |
 |---|---|---|
 | `AVANCE_1/` | Presentación v5 y guion v2: versión final presentada el 12/09/2026 (semana 5) | Cerrado |
-| `AVANCE_2/` | Presentación v3 (vigente) con su guion de 10 minutos, v2 y v1, sobre la plantilla oficial «Avance 2 AFE 2017» (semana 10) | En revisión |
+| `AVANCE_2/` | Presentación v4 (vigente) con su guion de 10 minutos; v3, v2 y v1 como historial, sobre la plantilla oficial «Avance 2 AFE 2017» (semana 10) | En revisión |
 
 Las versiones intermedias del Avance 1 (v1 a v4) quedan en la rama `PRESENTACION_TFG`.
+
+## Avance 2 · v4
+
+Misma estructura y datos que la v3 (19 láminas), con dos criterios de presentación:
+
+- **Títulos de resultado.** Cada lámina de resultados se titula «Resultado: …» con lo que muestra (por ejemplo, «Resultado: un ciclo de gestión único en MP21»), y lleva sobre el título la etiqueta del objetivo: «Desarrollo y resultados del OE1 · Arquitectura de procesos» u «OE2 · Evaluación de riesgos».
+- **Sin referencias a versiones.** Se presenta una única versión, así que la presentación no compara con versiones anteriores de sí misma ni de los manuales. La lámina de comparación de manuales se reemplazó por la apertura de MP21 con lo que hace cada proceso, y la tabla de equivalencias del ciclo por «El contrato dentro del ciclo», que ubica cada hito del contrato y marca las interfaces con MP19.
+
+Guion: `Guion_Avance_2_v4.md`. Generador: `gen_av4.py`.
 
 ## Avance 2 · v3
 
