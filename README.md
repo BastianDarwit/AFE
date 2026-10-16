@@ -8,7 +8,7 @@ Rama única para los hitos de avance. Cada hito tiene su carpeta y sus versiones
 | Carpeta | Contenido | Estado |
 |---|---|---|
 | `AVANCE_1/` | Presentación v5 y guion v2: versión final presentada el 12/09/2026 (semana 5) | Cerrado |
-| `AVANCE_2/` | Presentación v3 (vigente), v2 y v1, sobre la plantilla oficial «Avance 2 AFE 2017» (semana 10) | En revisión |
+| `AVANCE_2/` | Presentación v3 (vigente) con su guion de 10 minutos, v2 y v1, sobre la plantilla oficial «Avance 2 AFE 2017» (semana 10) | En revisión |
 
 Las versiones intermedias del Avance 1 (v1 a v4) quedan en la rama `PRESENTACION_TFG`.
 
