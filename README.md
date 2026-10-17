@@ -8,9 +8,26 @@ Rama única para los hitos de avance. Cada hito tiene su carpeta y sus versiones
 | Carpeta | Contenido | Estado |
 |---|---|---|
 | `AVANCE_1/` | Presentación v5 y guion v2: versión final presentada el 12/09/2026 (semana 5) | Cerrado |
-| `AVANCE_2/` | Presentación v5 (vigente) con su guion de 10 minutos; v4 a v1 como historial, sobre la plantilla oficial «Avance 2 AFE 2017» (semana 10) | En revisión |
+| `AVANCE_2/` | Presentación v6 (vigente) con su guion de 10 minutos; v5 a v1 como historial, sobre la plantilla oficial «Avance 2 AFE 2017» (semana 10) | En revisión |
 
 Las versiones intermedias del Avance 1 (v1 a v4) quedan en la rama `PRESENTACION_TFG`.
+
+## Avance 2 · v6
+
+16 láminas. Los resultados se reordenan en embudo: por macroproceso, arquitectura → ejemplo del manual → SIPOC, y luego la síntesis de ambos, que da paso al OE2.
+
+| Lámina | Contenido |
+|---:|---|
+| 6 | Arquitectura MP8: apertura del manual y franja de los cinco niveles (1 → 5 → 17 → 59 → 192) |
+| 7 | Ejemplo del manual MP8: subproceso C.1 |
+| 8 | SIPOC MP8 |
+| 9 | Arquitectura MP21: apertura, ciclo de gestión A → B → MP19 → C → D, estructura acordada con el dueño y cinco niveles (1 → 4 → 8 → 24 → 56) |
+| 10 | Ejemplo del manual MP21: subproceso C.1 |
+| 11 | SIPOC MP21 |
+| 12 | Síntesis: estructura por nivel y contenido de las tareas de ambos (total 248), lectura y CAP |
+| 13–15 | Universo del OE2, estructura de la matriz y carta Gantt |
+
+Salen la lámina resumen previa a los ejemplos (su contenido pasa a la síntesis), el ajuste metodológico con tabla APQC y el ciclo como lámina aparte (ambos integrados en la lámina 9) y el segundo ejemplo de MP21 (C.2). Guion: `Guion_Avance_2_v6.md`. Generador: `gen_av6.py` (reutiliza `gen_av5.py` y `gen_av2.py`).
 
 ## Avance 2 · v5
 
