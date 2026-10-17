@@ -8,9 +8,13 @@ Rama única para los hitos de avance. Cada hito tiene su carpeta y sus versiones
 | Carpeta | Contenido | Estado |
 |---|---|---|
 | `AVANCE_1/` | Presentación v5 y guion v2: versión final presentada el 12/09/2026 (semana 5) | Cerrado |
-| `AVANCE_2/` | Presentación v4 (vigente) con su guion de 10 minutos; v3, v2 y v1 como historial, sobre la plantilla oficial «Avance 2 AFE 2017» (semana 10) | En revisión |
+| `AVANCE_2/` | Presentación v5 (vigente) con su guion de 10 minutos; v4 a v1 como historial, sobre la plantilla oficial «Avance 2 AFE 2017» (semana 10) | En revisión |
 
 Las versiones intermedias del Avance 1 (v1 a v4) quedan en la rama `PRESENTACION_TFG`.
+
+## Avance 2 · v5
+
+Igual que la v4, pero la lámina 2 (título y precisiones de alcance) se reemplaza por una lámina de **Contenidos** con las cinco partes de la exposición y sus láminas: problema (3–4), objetivos (5), resultados del OE1 (6–15, destacada), resultados del OE2 (16–17) y carta Gantt (18). Guion: `Guion_Avance_2_v5.md`. Generador: `gen_av5.py`.
 
 ## Avance 2 · v4
 
